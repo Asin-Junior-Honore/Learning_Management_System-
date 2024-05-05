@@ -16,9 +16,8 @@ $options = [
 ];
 
 try {
-    $pdo = new PDO($dsn, $user, $pass, $options); // Establish the PDO connection
+    $pdo = new PDO($dsn, $user, $pass, $options);
 } catch (PDOException $e) {
-    // Log error and display user-friendly message
     error_log('Database connection error: ' . $e->getMessage());
     die('Database connection failed. Please try again later.');
 }

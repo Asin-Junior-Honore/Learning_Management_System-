@@ -1,11 +1,10 @@
 <?php
-// Load data from the centralized data-fetching script
 $data = include '../data_fetcher.php';
 
-$announcements = $data['announcements'] ?? []; // Use empty array if data is not set
-$results = $data['results'] ?? []; // Handle undefined index errors
-$courses = $data['courses'] ?? []; // Handle undefined index errors
-$assignments = $data['assignments'] ?? []; // Fetch assignments data
+$announcements = $data['announcements'] ?? [];
+$results = $data['results'] ?? [];
+$courses = $data['courses'] ?? [];
+$assignments = $data['assignments'] ?? [];
 ?>
 
 <!DOCTYPE html>
@@ -21,41 +20,33 @@ $assignments = $data['assignments'] ?? []; // Fetch assignments data
 
     <!-- Custom CSS for additional styling -->
     <style>
-        /* Set a background color for the whole page */
         body {
             background-color: #f5f5f5;
-            /* Light gray background */
+
             padding-top: 20px;
         }
 
-        /* Add some space between sections */
+
         .section-heading {
             margin-top: 40px;
         }
 
-        /* Change the card styles to add some color */
         .card {
             border: none;
-            /* Remove default border */
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
-            /* Add shadow for depth */
             background-color: #ffffff;
-            /* White card background */
             border-radius: 8px;
-            /* Rounded corners */
         }
 
-        /* Change the card header style for better visibility */
+
         .card-title {
             color: #007bff;
-            /* Bootstrap primary color */
             font-weight: bold;
         }
 
-        /* Add hover effects on the card */
         .card:hover {
             box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-            /* Increase shadow on hover */
+
         }
     </style>
 </head>
@@ -117,7 +108,8 @@ $assignments = $data['assignments'] ?? []; // Fetch assignments data
                         <div>
                             <h5 class="card-title"><?= htmlspecialchars($assignment['assignment_title']) ?></h5>
                             <p class="card-text"><?= htmlspecialchars($assignment['subject']) ?> -
-                                <?= htmlspecialchars($assignment['description']) ?></p>
+                                <?= htmlspecialchars($assignment['description']) ?>
+                            </p>
                         </div>
                     </div>
                 </div>
