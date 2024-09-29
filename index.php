@@ -61,7 +61,7 @@ if (!isset($_SESSION['username']) || !isset($_SESSION['role'])) {
             </div>
             <!-- Welcome Section -->
             <div class="text-cente adjust mb-4">
-                <h1 class="display-5">Welcome to the Portal of <br /> computer science department</h1>
+                <h1 class="display-5 text-center">Welcome to Temple Gate <br/> Polytechnic</h1>
                 <p class="lead">Your one-stop platform for all educational resources and information.</p>
             </div>
         </div>
