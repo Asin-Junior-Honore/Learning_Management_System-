@@ -18,9 +18,32 @@ if (!isset($_SESSION['username']) || !isset($_SESSION['role'])) {
 </head>
 
 <style>
-    img {
+    .position-relative {
+        position: relative;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        /* Semi-transparent background */
+        padding: 20px;
+        border-radius: 10px;
+        /* Optional: adds rounded corners */
+    }
+
+    .logo {
         width: 100px;
         height: 100px;
+    }
+
+    .learning {
+        height: 450px;
+        object-fit: cover;
+        border-radius: 10px;
+
     }
 
     .adjust {
@@ -34,7 +57,7 @@ if (!isset($_SESSION['username']) || !isset($_SESSION['role'])) {
 
         <div class="d-flex align-items-start">
             <div>
-                <img src="assets/promise.jpeg" alt="Welcome Image" class="img-fluid" style="max-width: 200px; margin-right: 20px;">
+                <img src="assets/promise.jpeg" alt="Welcome Image" class="img-fluid logo" style="max-width: 200px; margin-right: 20px;">
             </div>
             <!-- Welcome Section -->
             <div class="text-cente adjust mb-4">
@@ -63,8 +86,17 @@ if (!isset($_SESSION['username']) || !isset($_SESSION['role'])) {
             </ul>
         </div>
 
+        <div class="position-relative">
+            <img src="https://media.istockphoto.com/id/1307457391/photo/happy-black-student-raising-arm-to-answer-question-while-attending-class-with-her-university.jpg?s=612x612&w=0&k=20&c=iZaZFyC-WqlqSQc4elqUNPTxLvWPe8P5Tb_YdZnrI9Q=" alt="Background Image" class="img-fluid w-100 learning">
+            <div class="overlay text-center">
+                <h1 class="display-4 text-white">Welcome to the Department of Computer Science</h1>
+            </div>
+        </div>
+
+
+
         <!-- Overview Section -->
-        <div class="mb-5">
+        <div class="my-5">
             <h2 class="h4">Overview of the Portal</h2>
             <p>
                 Our portal is designed to streamline educational processes and enhance communication within the academic
