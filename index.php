@@ -17,13 +17,32 @@ if (!isset($_SESSION['username']) || !isset($_SESSION['role'])) {
     <title>Portal</title>
 </head>
 
+<style>
+    img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .adjust {
+        margin: auto;
+        margin-left: 10rem;
+    }
+</style>
+
 <body>
     <div class="container mt-5">
-        <!-- Welcome Section -->
-        <div class="text-center mb-4">
-            <h1 class="display-4">Welcome to the Portal</h1>
-            <p class="lead">Your one-stop platform for all educational resources and information.</p>
+
+        <div class="d-flex align-items-start">
+            <div>
+                <img src="assets/promise.jpeg" alt="Welcome Image" class="img-fluid" style="max-width: 200px; margin-right: 20px;">
+            </div>
+            <!-- Welcome Section -->
+            <div class="text-cente adjust mb-4">
+                <h1 class="display-4">Welcome to the Portal</h1>
+                <p class="lead">Your one-stop platform for all educational resources and information.</p>
+            </div>
         </div>
+
 
         <!-- Navigation Section -->
         <div class="d-flex justify-content-center mb-4">
